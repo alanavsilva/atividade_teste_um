@@ -59,7 +59,7 @@
         <label>Senha:</label>
         <input type="password" name="senha">
         <br>
-        <!-- // Usamos form para abrir um formulário, e o method para ser no método "post" --
+        <!-- // Usamos form para abrir um formulário, e o method para ser no método "post" -->
         <?php
 
         // Iniciamos em php de novo para casos de erro 
