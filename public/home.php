@@ -1,15 +1,25 @@
 <?php
+// Iniciamos php
+
 session_start();
+// Iniciamos uma sessão
+
 if(!isset($_SESSION["usuario"])){
     header("Location: ../index.php");
     exit();
+    // Usamos esse if para caso a sessão não esteja vinculada a um usuário, voltar a tela index (de login) e sair da home
 }
 
 include("../infra/db/connect.php");
+// Adicionamos o arquivo connect
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    // Usamos para verificar se  o metódo que está sendo usado é post
+
     $novoUsuario = $_POST['usuario'];
     $novaSenha = $_POST['senha'];
+
+     // USamos "$" para criar uma variável, e pegamos o valor do formulário
 
     $sql = "INSERT INTO usuarios (usuario,senha) 
     VALUES ('$novoUsuario','$novaSenha')";  
